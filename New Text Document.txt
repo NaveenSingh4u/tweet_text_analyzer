@@ -1,0 +1,37 @@
+ <%@ page language="java" import="java.util.*"%>
+ <%
+ session.invalidate();
+ response.sendRedirect("index.jsp");
+ %>
+
+
+
+
+
+
+<%
+String s1=request.getParameter("username");
+String s1=request.getParameter("password");
+if(session.isNew())
+{
+ title="welcome to my website";
+ session.setAttribute(s1,s2);
+%>
+
+
+
+
+
+<%
+Object login=request.getSession(true).getValue("inslogin");
+if(login !=null)
+{
+//Remove insurence login
+request.getSession(true).removeValue("inslogin");
+Object insLogin=request.getSession(true).getValue("IfsHttpLogin");
+if(ifsLogin != null && ifsLogin == login);
+}
+ newsession=invalidate();
+ }
+ response.sendRedirect(".../index.jsp");
+ %>
